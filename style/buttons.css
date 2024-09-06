@@ -167,10 +167,10 @@ body {
 .button03 i.premierTrait::before{
     content: '';
     position : absolute;
-    top: -1px;
+    top: -3px;
     left: 80%;
-    width: 10px;
-    height: 2px;
+    width: 12px;
+    height: 7px;
     border: 2px solid #27C7D4;
     background-color: #272822;
     transition: all 0.3s ease;
@@ -191,10 +191,10 @@ body {
 .button03 i.secondTrait::before{
     content: '';
     position : absolute;
-    bottom: -1px;
+    bottom: -3px;
     left: 20%;
-    width: 10px;
-    height: 2px;
+    width: 12px;
+    height: 7px;
     border: 2px solid #27C7D4;
     background-color: #272822;
     transition: all 0.3s ease;
