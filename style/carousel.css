@@ -1,4 +1,4 @@
-:root{
+:root {
     --bg-color: #212121;
     --bg-color-white: #fafafa;
     --black-color: #212b34;
@@ -22,14 +22,13 @@ body {
     align-items: center;
 }
 
-h1{
+h1 {
     font-size: 3em;
     padding-bottom: 2em;
-    color: var(--light-color);;
+    color: var(--light-color);
 }
 
-img{
-    /* width: 100%; */
+img {
     height: 100%;
 }
 
@@ -45,6 +44,7 @@ img{
 }
 
 .card {
+    position: relative;
     display: flex;
     justify-content: center;
     flex: 1;
@@ -55,16 +55,48 @@ img{
     border-radius: 15px;
     overflow: hidden;
     transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    &img {
-        object-fit: cover;
-        object-position: center;
-    }
+}
+
+.card img {
+    object-fit: cover;
+    object-position: center;
 }
 
 .card:hover {
     flex: 4;
 }
 
-.container:hover card:not(:hover){
+.container:hover .card:not(:hover) {
     filter: grayscale(100%);
+}
+
+.fond {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Opacité sans affecter les enfants */
+    height: 20%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.more-info {
+    font-size: 1.2em;
+    position: absolute;
+    border: 1px solid white;
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 25px;
+}
+
+.card:hover .fond {
+    visibility: visible;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
 }
